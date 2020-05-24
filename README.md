@@ -181,7 +181,7 @@ github上直接看的话很多公式和图片看不了，**请 clone 到本地�
 |  22  |          |                      说说 const 的作用                       |
 |  23  |          |                     关键字 static 的作用                     |
 |  24  |    是    |                   sizeof 和 strlen 的区别                    |
-|  25  |          |              strcpy 、strncpy 和 memcpy 的区别               |
+|  25  |    是    |              strcpy 、strncpy 和 memcpy 的区别               |
 |  26  |          |                   全局变量和局部变量的区别                   |
 |  27  |          |                       实参和形参的区别                       |
 |  28  |          |                说一说 C++ 中的四种 cast 转换                 |
