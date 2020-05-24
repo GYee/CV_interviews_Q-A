@@ -180,7 +180,7 @@ github上直接看的话很多公式和图片看不了，**请 clone 到本地�
 |  21  |          | 重载(overload)、重写(override)、重定义(overwrite)这三者的区别 |
 |  22  |          |                      说说 const 的作用                       |
 |  23  |          |                     关键字 static 的作用                     |
-|  24  |          |                   sizeof 和 strlen 的区别                    |
+|  24  |    是    |                   sizeof 和 strlen 的区别                    |
 |  25  |          |              strcpy 、strncpy 和 memcpy 的区别               |
 |  26  |          |                   全局变量和局部变量的区别                   |
 |  27  |          |                       实参和形参的区别                       |
