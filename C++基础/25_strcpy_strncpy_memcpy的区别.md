@@ -1,6 +1,6 @@
 ## 问题
 
-strcpy 、strncpy 和 memcpy 的区别。这个可能不太常考，但是也是一个易错点，顺便总计下吧。
+strcpy 、strncpy 和 memcpy 的区别。这个可能不太常考，但是也是一个易错点，顺便总结下吧。
 
 ## strcpy
 
@@ -53,7 +53,7 @@ int main() {
     cout<<"dest4:"<<dest4<<endl;  // 输出 you are best。字符串最后一个字节存放的是一个空字符——“\0”，用来表示字符串的结束。
                                  // 把src4复制到dest4之后, src4中的空字符会把把复制后的字符串隔断，所以会显示到best就会结束。
     return 0;
-}#
+}
 ```
 
 ## strncpy
