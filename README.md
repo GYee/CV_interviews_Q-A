@@ -87,7 +87,7 @@ github上直接看的话很多公式和图片看不了，**请 clone 到本地�
 |  8   |          |                    为什么要转换成对偶问题                    |
 |  9   |          |                         SMO算法思想                          |
 |  10  |          |                      引入核函数的的作用                      |
-|  11  |          |                         boosting思想                         |
+|  11  |    是    |                         boosting思想                         |
 |  12  |          |               Adaboost、GBDT、XGBoost算法原理                |
 |  13  |          |                    AdaBoost和GBDT算法联系                    |
 |  14  |          |                     GBDT和XGBoost的比较                      |
