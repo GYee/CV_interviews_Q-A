@@ -87,14 +87,13 @@ github上直接看的话很多公式和图片看不了，**请 clone 到本地�
 |  8   |          |                    为什么要转换成对偶问题                    |
 |  9   |          |                         SMO算法思想                          |
 |  10  |          |                      引入核函数的的作用                      |
-|  11  |    是    |                         boosting思想                         |
-|  12  |          |               Adaboost、GBDT、XGBoost算法原理                |
+|  11  |    是    |                    集成学习的几种思想介绍                    |
+|  12  |  待补充  |               Adaboost、GBDT、XGBoost算法原理                |
 |  13  |          |                    AdaBoost和GBDT算法联系                    |
 |  14  |          |                     GBDT和XGBoost的比较                      |
 |  15  |          | XGBoost构建树的时候使用哪些优化方式，怎幺处理缺失值的，并行化是如何实现的 |
 |  16  |          | XGBOOST采样时有放回的还是无放回的，XGBOOST的调参步骤是怎样的 |
-|  17  |          | bagging算法思想，并说说bagging算法与DNN中的dropout技术思想的一致性 |
-|  18  |          |                 为什么bagging能降低模型方差                  |
+|  17  |    是    | bagging算法思想，并说说bagging算法与DNN中的dropout技术思想的一致性 |
 |  19  |          |      如何从偏差和方差的角度解释bagging和boosting的原理       |
 |  20  |          | 随机森林算法思想，怎么增加随机性，如何评估特征重要性，为什么不容易过拟合 |
 |  21  |          |                随机森立和GBDT的相同点和不同点                |
