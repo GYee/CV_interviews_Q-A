@@ -95,7 +95,7 @@ $$
 
 > 若 $\frac{a}{n}$ 刚好取得整数，自然没有问题，例如假设a=13，要得到1×1pooling结果，只需令sizeX=13，stride=13即可。
 >
-> 但是当 $\frac{a}{n}$ 不能取整时，如要得到2×2pooling结果，论文中给的sizeX=7，stride=6。（应该是对窗口大小sizeX稍作调整吧，然后采用重叠池化overlapping pooling的方法进行操作）
+> 但是当 $\frac{a}{n}$ 不能取整时，例如要得到2×2pooling结果，论文中给的sizeX=7，stride=6。（应该是对窗口大小sizeX稍作调整吧，然后采用重叠池化overlapping pooling的方法进行操作）
 
 **作用：CNN中加入SPP层之后，可以让CNN处理任意大小的输入，因而模型可以变得更加灵活。**
 
