@@ -51,7 +51,6 @@ $$
    \gamma_{ik}=\frac{\alpha_{k}\phi(x_{i}|\theta_{k})}{\sum_{k=1}^{K}\alpha_{k}\phi(x_{i}|\theta_{k})} \ ,\quad 其中，\theta_{k}=(\mu_{k},\sigma_{k}^{2})
    $$
    
-
 3. **M步：**更新各个高斯分布的参数为$\{(\hat{\alpha}_{k},\hat{\mu}_{k},\hat{\sigma}_{k}^{2})\ | \ 1\leq k \leq K \ \}$ :
    $$
    \hat{\alpha}_{k}=\frac{\sum_{i=1}^{m} \gamma_{ik} x_{i}}{\sum_{i=1}^{m} \gamma_{ik}} \\
