@@ -66,7 +66,7 @@ $$
 
 作者的做法是：将多个cell组成更大的block，然后对每个block进行对比度归一化。图像最终的HOG特征描述子就是所有block内的cell的直方图构成的向量。事实上，块之间是有重叠的，也就是说，每个细胞单元的直方图都会被多次用于最终的描述子的计算。块之间的重叠看起来有冗余，但可以显著的提升性能 。
 
-![](F:%5Cstudy%5CMyProject%5CNotes%5CCV%5Cimage%5CHOG1.png)
+![](https://i.loli.net/2020/06/26/XCeHTDhs65YmiUb.png)
 
 如上图所示，每个block由2×2个cell组成，每个cell包含8×8个像素，每个cell得到9个方向的bin，因此每个block的特征向量维度为2×2×9=36维。
 
