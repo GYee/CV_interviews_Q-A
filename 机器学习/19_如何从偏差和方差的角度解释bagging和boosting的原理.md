@@ -16,7 +16,7 @@ Bagging对样本重采样，对每一重采样得到的子样本集训练一个�
 
 另一方面，若各子模型独立，则有 $Var(\frac{\sum X_i}{n}) = \frac{Var(X_i)}{n}$ ，此时可以显著降低variance。若各子模型完全相同，则 $Var(\frac{\sum X_i}{n}) = Var(X_i)$ ，此时不会降低variance。bagging方法得到的各子模型是有一定相关性的，属于上面两个极端状况的中间态，因此可以一定程度降低variance。
 
-为了进一步降低variance，Random forest 通过随机选取特征子集，进一步减少了模型之间的香相关性，从而使得variance进一步降低。
+为了进一步降低variance，Random forest 通过随机选取特征子集，进一步减少了模型之间的相关性，从而使得variance进一步降低。
 
 ## 参考资料
 

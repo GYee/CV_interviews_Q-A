@@ -6,7 +6,7 @@
 
 ## 简单介绍下这两个网络
 
-目标检测的框架中包含4个关键模块，包括region proposal（生成ROI）、feature extraction（特征提取网络）、classification（ROI分类）、regression（ROI回归）。而faster-rcnn利用一个神经网络将这4个模块结合起来，训练了一个端到端的网络。通过观察图1、图2、图3，我们可以得到如下的结论：**Faster-rcnn**主要包括4个关键模块，特征提取网络、生成ROI、ROI分类、ROI回归。
+目标检测的框架中包含4个关键模块，包括region proposal（生成ROI）、feature extraction（特征提取网络）、classification（ROI分类）、regression（ROI回归）。而faster-rcnn利用一个神经网络将这4个模块结合起来，训练了一个端到端的网络。
 
 1. **特征提取网络**：它用来从大量的图片中提取出一些不同目标的重要特征，通常由conv+relu+pool层构成，常用一些预训练好的网络（VGG、Inception、Resnet等），获得的结果叫做特征图；
 
@@ -25,7 +25,7 @@
     最后将其输入简单的检测网络中，然后利用1x1的卷积进行分类（区分不同的类别，N+1类，多余的一类是背景，用于删除不准确的ROI），同时进行BB回归（精确的调整预测的ROI和GT的ROI之间的偏差值），从而输出一个BB集合。 
 整个**Mask R-CNN**算法的思路很简单，就是在原始Faster-rcnn算法的基础上面增加了FCN来产生对应的MASK分支。即Faster-rcnn + FCN，更细致的是 RPN + ROIAlign + Fast-rcnn + FCN。
 
-**FCN**算法是一个经典的语义分割算法，可以对图片中的目标进行准确的分割。其总体架构如上图所示，它是一个端到端的网络，主要的模快包括卷积和反卷积，即先对图像进行卷积和池化，使其feature map的大小不断减小；然后进行反卷积操作，即进行插值操作，不断的增大其feature map，最后对每一个像素值进行分类。从而实现对输入图像的准确分割。
+**FCN**算法是一个经典的语义分割算法，可以对图片中的目标进行准确的分割。它是一个端到端的网络，主要的模快包括卷积和反卷积，即先对图像进行卷积和池化，使其feature map的大小不断减小；然后进行反卷积操作，即进行插值操作，不断的增大其feature map，最后对每一个像素值进行分类。从而实现对输入图像的准确分割。
 
 ## 损失函数
 
@@ -37,7 +37,7 @@ Mask R-CNN 是实例分割网络，所以其损失函数由三部分组成：$L 
 
 ### mask损失函数$L_{mask}$
 
-对于每一个ROI，mask分支有 $K*m*m$ 维度的输出，其对K个大小为m*m的mask进行编码，每一个mask有K个类别。我们使用了per-pixel sigmoid，并且将Lmask定义为the average binary cross-entropy loss 。对应一个属于GT中的第k类的ROI，Lmask仅仅在第k个mask上面有定义（其它的k-1个mask输出对整个Loss没有贡献）。我们定义的Lmask允许网络为每一类生成一个mask，而不用和其它类进行竞争；我们依赖于分类分支所预测的类别标签来选择输出的mask。这样将分类和mask生成分解开来。这与利用FCN进行语义分割的有所不同，它通常使用一个per-pixel sigmoid和一个multinomial cross-entropy loss ，在这种情况下mask之间存在竞争关系；而由于我们使用了一个per-pixel sigmoid 和一个binary loss ，不同的mask之间不存在竞争关系。经验表明，这可以提高实例分割的效果。
+对于每一个ROI，mask分支有 $K*m*m$ 维度的输出，其对K个大小为m*m的mask进行编码，每一个ROI有K个类别。我们使用了per-pixel sigmoid，并且将Lmask定义为the average binary cross-entropy loss 。对应一个属于GT中的第k类的ROI，Lmask仅仅在第k个mask上面有定义（其它的k-1个mask输出对整个Loss没有贡献）。我们定义的Lmask允许网络为每一类生成一个mask，而不用和其它类进行竞争；我们依赖于分类分支所预测的类别标签来选择输出的mask。这样将分类和mask生成分解开来。这与利用FCN进行语义分割的有所不同，它通常使用一个per-pixel sigmoid和一个multinomial cross-entropy loss ，在这种情况下mask之间存在竞争关系；而由于我们使用了一个per-pixel sigmoid 和一个binary loss ，不同的mask之间不存在竞争关系。经验表明，这可以提高实例分割的效果。
 
 具体公式如下：
 $$
@@ -96,4 +96,5 @@ R是 smoothL1 函数，不同之处是这里**σ = 3，RPN训练（σ = 1，Fast
 [Mask R-CNN详解](https://blog.csdn.net/WZZ18191171661/article/details/79453780)
 [Faster-rcnn详解](https://blog.csdn.net/WZZ18191171661/article/details/79439212)
 [【Faster RCNN】损失函数理解](https://blog.csdn.net/Mr_health/article/details/84970776)
+[Mask-RCNN 算法及其实现详解](https://blog.csdn.net/remanented/article/details/79564045)(讲得非常好)
 
