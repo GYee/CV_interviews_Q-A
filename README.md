@@ -65,7 +65,7 @@ github上直接看的话很多公式和图片看不了，**请 clone 到本地�
 |  38  |  待补充  |                  了解全卷积网络FCN 和 UNet                   |
 |  39  |          | two stage目标检测网络的发展脉络及各自的贡献与特点（尤其注意损失函数） |
 |  40  |    是    |             解释 ROI Pooling 和 ROI Align 的区别             |
-|  41  |          |            CascadeRCNN的原理，本质解决了什么问题             |
+|  41  |    是    |            CascadeRCNN的原理，本质解决了什么问题             |
 |  42  |          |                       介绍下 FPN 网络                        |
 |  43  |          | one stage目标检测网络 YOLO 和 SSD 网络结构及优缺点（尤其注意损失函数） |
 |  44  |    是    |                     concat 和 add 的区别                     |
